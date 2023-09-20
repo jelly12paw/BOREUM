@@ -1,0 +1,33 @@
+.stamp_board {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.stamp_container {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.stamp {
+  width: 80px;
+  height: 80px;
+  background-color: #ddd;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.stamp:hover {
+  background-color: #ffcc00;
+}
+
+.stamped {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  background-color: #ffcc00;
+  cursor: not-allowed;
+  pointer-events: none;
+}
