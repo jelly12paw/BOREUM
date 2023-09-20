@@ -80,6 +80,14 @@ button img {
     filter: brightness(0.7);
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    filter: brightness(0.9);
+}
+
 /* 태블릿 크기 스타일 */
 @media screen and (max-width: 955px) {
     .btns p {
