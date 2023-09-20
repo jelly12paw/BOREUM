@@ -1,0 +1,108 @@
+.main {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    height: 60%;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    color: var(--title);
+    font-weight: bolder;
+    font-size: 10rem;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.4rem;
+}
+
+.title span img {
+    height: 10rem;
+}
+
+.title span {
+    margin-top: 2.5rem;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btns p {
+    margin: 1rem 0 1rem 0;
+    padding: 2rem 4.5rem;
+    background-color: var(--sbbg);
+    color: var(--text);
+    font-size: 3rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+.btns p svg {
+    margin-right: 0.5rem;
+}
+
+button {
+    background: transparent;
+    border-style: none;
+    margin-top: 5rem;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+button:hover img {
+    width: 4.5rem;
+    filter: brightness(1);
+}
+
+button img {
+    width: 4.3rem;
+    padding-left: 1rem;
+    filter: brightness(0.7);
+}
+
+/* 태블릿 크기 스타일 */
+@media screen and (max-width: 955px) {
+    .btns p {
+        margin: 1rem 0 1rem 0;
+        padding: 2rem 4rem;
+        font-size: 2rem;
+    }
+
+    .title {
+        font-weight: bolder;
+        font-size: 8.5rem;
+        letter-spacing: 0.3rem;
+    }
+    
+    .title span img {
+        height: 8rem;
+    }
+
+    button:hover img {
+        width: 3.7rem;
+    }
+    
+    button img {
+        width: 3.5rem;
+    }
+}
