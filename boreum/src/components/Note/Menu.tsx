@@ -1,13 +1,15 @@
 import React from 'react';
 import styles from './Menu.module.css';
+import { BsCameraVideo, BsImage } from 'react-icons/bs';
+import { TfiNotepad, TfiCheckBox } from 'react-icons/tfi';
 
 export const Menu = () => {
     return  <div className={styles.menu}>
                 <div className={styles.items}>
-                    <div>비디오</div>
-                    <div>이미지</div>
-                    <div>노트</div>
-                    <div>체크박스</div>
+                    <div><BsCameraVideo />Video</div>
+                    <div><BsImage />Image</div>
+                    <div><TfiNotepad />Note</div>
+                    <div><TfiCheckBox />Checkbox</div>
                 </div>
             </div>;
 };
