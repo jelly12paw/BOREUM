@@ -13,7 +13,7 @@ export const Main = () => {
                     <div className={styles.title}>B<span><img src={darkmode ? yellowmoon : whitemoon} alt={'moon'} /></span>RUEM</div>
                     <div className={styles.btns}>
                         <Link to="/stamp"><p><PiStampLight/> 도장 찍기</p></Link>
-                        <p><PiNotePencilThin/> 하루 기록</p>
+                        <Link to="/note"><p><PiNotePencilThin/> 하루 기록</p></Link>
                     </div>
                 </div>
                 <button onClick={toggleDarkmode}>
