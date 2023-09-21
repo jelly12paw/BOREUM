@@ -1,6 +1,99 @@
+.main {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    color: var(--title);
+    font-weight: bolder;
+    font-size: 2.6rem;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2rem;
+    margin-right: 1rem;
+}
+
+.title span img {
+    height: 3rem;
+    margin: 0 -0.1rem;
+}
+
+.title span {
+    margin-top: 0.6rem;
+}
+
+.nav {
+    height: 10%;
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+    color: var(--text);
+}
+
+.mode {
+    margin-top: 0;
+}
+
+.mode svg {
+    font-size: 1.6rem;
+    color: var(--text);
+}
+
+.mode:hover svg {
+    transform: scale(1.1);
+    color: var(--title);
+}
+
+a {
+    color: var(--title);
+}
+
+.container {
+    height: 85%;
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.boards {
+    background-color: var(--sbbg);
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+}
+
+.board_nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.board_nav h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    color: var(--text);
+}
+
+.bin {
+    margin-top: -3rem;
+    margin-left: 46rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.bin:hover {
+    transform: scale(1.1);
+}
+
 .stamp_board {
-  text-align: center;
-  margin-top: 20px;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .stamp_container {
@@ -8,26 +101,86 @@
   justify-items: center;
   grid-template-rows: repeat(2, auto);
   grid-template-columns: repeat(8, 1fr);
+  background-color: rgb(255, 255, 255, 0.9);
+  margin: 1rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.stamp_container div img {
+    height: 5.5rem;
 }
 
 .stamp {
-  width: 80px;
-  height: 80px;
-  background-color: #ddd;
-  margin: 10px;
+  margin: 0.2rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  filter: brightness(0.8);
 }
 
 .stamp:hover {
-  background-color: #ffcc00;
+    filter: brightness(1);
 }
 
 .stamped {
-  width: 80px;
-  height: 80px;
-  margin: 10px;
-  background-color: #ffcc00;
+  margin: 0.2rem;
   cursor: not-allowed;
   pointer-events: none;
+}
+
+.add {
+    color: var(--actext);
+    font-size: 2rem;
+}
+
+.add svg {
+    margin-right: 0.2rem;
+}
+
+.add:hover {
+    transform: scale(1.1);
+}
+
+.create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 5rem;
+}
+
+.create input {
+    width: 20rem;
+    height: 2.3rem;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 0.3rem;
+}
+
+.create button {
+    margin-top: 0;
+    margin-left: 0.3rem;
+    font-size: 1.7rem;
+}
+
+.create button:hover {
+    transform: scale(1.1);
+}
+
+/* 태블릿 크기 스타일 */
+@media screen and (max-width: 955px) {
+    .stamp_container {
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .stamp_container div img {
+        height: 6rem;
+    }
+
+    .bin {
+        margin-left: 43rem;
+        margin-right: 3rem;
+    }
 }
