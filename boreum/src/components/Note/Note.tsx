@@ -26,7 +26,7 @@ export const Note = () => {
                     <div className={styles.add} onClick={toggleMenu}>
                         <PiNotePencilThin/> ADD
                     </div>
-                    {menuOpen ? <Menu /> : ''}
+                    {menuOpen && <Menu /> }
                     <div className={styles.board}></div>
                 </div>
             </div>;
