@@ -1,4 +1,4 @@
-.note {
+.todo {
     position: fixed;
     top: 0;
     left: 0;
@@ -24,7 +24,7 @@
 .form__container {
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     color: #1f1762;
     text-align: center;
 }
@@ -41,14 +41,9 @@
     padding-left: 0.5rem;
 }
 
-.form__container textarea {
-    width: 16rem;
-    padding: 0.5rem;
-}
-
 .btns {
     display: flex;
-    margin-top: -3.5rem;
+    margin-top: -1.5rem;
 }
 
 button svg {

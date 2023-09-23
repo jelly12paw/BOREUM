@@ -9,6 +9,7 @@ import { PiNotePencilThin } from 'react-icons/pi';
 import { Menu } from './Menu';
 import { MediaInput } from './Input/MediaInput';
 import { TextareaInput } from './Input/TextareaInput';
+import { TextInput } from './Input/TextInput';
 
 export const Note = () => {
     const { darkmode, toggleDarkmode } = useDarkmode();
@@ -46,7 +47,9 @@ export const Note = () => {
                     </div>
                     {menuOpen && <Menu selected={handleMenu} /> }
                     {selectedMenu === 'video' && <MediaInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
+                    {selectedMenu === 'image' && <MediaInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
                     {selectedMenu === 'note' && <TextareaInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
+                    {selectedMenu === 'todo' && <TextInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
                     <div className={styles.board}>
 
                     </div>

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import styles from './TextareaInput.module.css';
+import styles from './TextInput.module.css';
 import { BsSend, BsXLg } from 'react-icons/bs';
 interface TextareaInputProps {
     onFormSubmit: (title: string, body: string) => void;
     handleClose: () => void;
 }
 
-export const TextareaInput: React.FC<TextareaInputProps> = ({ onFormSubmit, handleClose }) => {
+export const TextInput: React.FC<TextareaInputProps> = ({ onFormSubmit, handleClose }) => {
     const [title, setTitle] = useState<string>('');
     const [body, setBody] = useState<string>('');
     
@@ -15,15 +15,15 @@ export const TextareaInput: React.FC<TextareaInputProps> = ({ onFormSubmit, hand
     };
 
     return  <form onSubmit={handleSubmit}>
-                <div className={styles.note}>    
+                <div className={styles.todo}>    
                     <div className={styles.form}>
                         <div className={styles.form__container}>
                             <label htmlFor="title">제목</label>
                             <input type="text" id="title" placeholder={'제목을 입력해주세요'} value={title} onChange={(e) => setTitle(e.target.value)} />
                         </div>
                         <div className={styles.form__container}>
-                            <label htmlFor="body">노트</label>
-                            <textarea id="body" cols={30} rows={6} placeholder={'노트를 입력해주세요'} value={body} onChange={(e) => setBody(e.target.value)} required />
+                            <label htmlFor="body">할 일</label>
+                            <input type="text" id="body" placeholder={'할 일을 입력해주세요'} value={body} onChange={(e) => setBody(e.target.value)} required />
                         </div>
                         <div className={styles.btns}>
                             <button type="submit"><BsSend /></button>
