@@ -14,10 +14,10 @@ export const Menu: React.FC<MenuProps> = ({ selected }) => {
     
     return  <div className={styles.menu}>
                 <div className={styles.items}>
-                    <div onClick={() => handleMenu('video')}><BsCameraVideo />Video</div>
-                    <div onClick={() => handleMenu('image')}><BsImage />Image</div>
-                    <div onClick={() => handleMenu('note')}><TfiNotepad />Note</div>
-                    <div onClick={() => handleMenu('todo')}><TfiCheckBox />Todo</div>
+                    <div onClick={() => handleMenu('Video')}><BsCameraVideo />Video</div>
+                    <div onClick={() => handleMenu('Image')}><BsImage />Image</div>
+                    <div onClick={() => handleMenu('Note')}><TfiNotepad />Note</div>
+                    <div onClick={() => handleMenu('Todo')}><TfiCheckBox />Todo</div>
                 </div>
             </div>;
 };

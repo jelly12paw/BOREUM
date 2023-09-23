@@ -13,6 +13,7 @@ import { TextInput } from './Input/TextInput';
 
 export const Note = () => {
     const { darkmode, toggleDarkmode } = useDarkmode();
+
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -21,15 +22,14 @@ export const Note = () => {
     const handleMenu = (menu:string) => {
         setSelectedMenu(menu);
     };
-    const [title, setTitle] = useState<string>('');
-    const [body, setBody] = useState<string>('');
 
+    const [items, setItems] = useState<{type: string, title: string, body: string}[]>([]);
     const handleFormSubmit = (title: string, body: string) => {
-        setTitle(title);
-        setBody(body);
+        const newItem = {type: selectedMenu, title: title, body: body};
+        setItems([...items, newItem]);
         setSelectedMenu('');
     };
-    console.log(title, body);
+    
     const handleClose = () => {
         setSelectedMenu('');
     };
@@ -46,10 +46,10 @@ export const Note = () => {
                         <PiNotePencilThin/> ADD
                     </div>
                     {menuOpen && <Menu selected={handleMenu} /> }
-                    {selectedMenu === 'video' && <MediaInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
-                    {selectedMenu === 'image' && <MediaInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
-                    {selectedMenu === 'note' && <TextareaInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
-                    {selectedMenu === 'todo' && <TextInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
+                    {selectedMenu === 'Video' && <MediaInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
+                    {selectedMenu === 'Image' && <MediaInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
+                    {selectedMenu === 'Note' && <TextareaInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
+                    {selectedMenu === 'Todo' && <TextInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
                     <div className={styles.board}>
 
                     </div>
