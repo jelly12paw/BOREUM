@@ -29,11 +29,11 @@ export const Note = () => {
         setItems([...items, newItem]);
         setSelectedMenu('');
     };
-    
+
     const handleClose = () => {
         setSelectedMenu('');
     };
-    
+
     return  <div className={styles.note}>
                 <div className={styles.nav}>
                     <Link to="/">
@@ -51,7 +51,7 @@ export const Note = () => {
                     {selectedMenu === 'Note' && <TextareaInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
                     {selectedMenu === 'Todo' && <TextInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
                     <div className={styles.board}>
-
+                    
                     </div>
                 </div>
             </div>;

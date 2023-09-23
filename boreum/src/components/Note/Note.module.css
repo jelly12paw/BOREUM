@@ -87,4 +87,7 @@ a {
     border-radius: 0.5rem;
     background-color: var(--sbbg);
     margin-top: 0.5rem;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
 }
