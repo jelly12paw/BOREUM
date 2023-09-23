@@ -7,14 +7,31 @@ import { Link } from 'react-router-dom';
 import { BsSun, BsMoon } from 'react-icons/bs';
 import { PiNotePencilThin } from 'react-icons/pi';
 import { Menu } from './Menu';
+import { MediaInput } from './Input/MediaInput';
 
 export const Note = () => {
     const { darkmode, toggleDarkmode } = useDarkmode();
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState<boolean>(false);
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
+    const [selectedMenu, setSelectedMenu] = useState<string>('');
+    const handleMenu = (menu:string) => {
+        setSelectedMenu(menu);
+    };
+    const [title, setTitle] = useState<string>('');
+    const [url, setUrl] = useState<string>('');
 
+    const handleFormSubmit = (title: string, url: string) => {
+        setTitle(title);
+        setUrl(url);
+        setSelectedMenu('');
+    };
+    console.log(title, url);
+    const handleClose = () => {
+        setSelectedMenu('');
+    };
+    
     return  <div className={styles.note}>
                 <div className={styles.nav}>
                     <Link to="/">
@@ -26,8 +43,11 @@ export const Note = () => {
                     <div className={styles.add} onClick={toggleMenu}>
                         <PiNotePencilThin/> ADD
                     </div>
-                    {menuOpen && <Menu /> }
-                    <div className={styles.board}></div>
+                    {menuOpen && <Menu selected={handleMenu} /> }
+                    {selectedMenu && <MediaInput onFormSubmit={handleFormSubmit} handleClose={handleClose}/>}
+                    <div className={styles.board}>
+
+                    </div>
                 </div>
             </div>;
 };
