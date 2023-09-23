@@ -1,0 +1,37 @@
+.container {
+    margin-bottom: 1rem;
+}
+
+.container:hover button {
+    visibility: visible;
+}
+
+.container button {
+    visibility: hidden;
+    margin-top: 0.5rem;
+}
+
+.container button svg {
+    font-size: 4rem;
+    color: var(--text);
+}
+
+/* 태블릿 크기 스타일 */
+@media screen and (max-width: 1070px) {
+    .container button {
+        visibility: visible;
+    }
+    .container button svg {
+        font-size: 3rem;
+    }
+}
+
+/* 모바일 크기 스타일 */
+@media screen and (max-width: 830px) {
+    .container button {
+        visibility: visible;
+    }
+    .container button svg {
+        font-size: 2rem;
+    }
+}

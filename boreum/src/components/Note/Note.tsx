@@ -10,6 +10,7 @@ import { Menu } from './Menu';
 import { MediaInput } from './Input/MediaInput';
 import { TextareaInput } from './Input/TextareaInput';
 import { TextInput } from './Input/TextInput';
+import { RenderItems } from './Items/RenderItems';
 
 export const Note = () => {
     const { darkmode, toggleDarkmode } = useDarkmode();
@@ -34,6 +35,11 @@ export const Note = () => {
         setSelectedMenu('');
     };
 
+    const handleDelete = (idx: number) => {
+        const updatedItems = items.filter((_, index) => index !== idx);
+        setItems(updatedItems);
+    };
+
     return  <div className={styles.note}>
                 <div className={styles.nav}>
                     <Link to="/">
@@ -51,7 +57,7 @@ export const Note = () => {
                     {selectedMenu === 'Note' && <TextareaInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
                     {selectedMenu === 'Todo' && <TextInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
                     <div className={styles.board}>
-                    
+                        <RenderItems items={items} handleDelete={handleDelete}/>
                     </div>
                 </div>
             </div>;
