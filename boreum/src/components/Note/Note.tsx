@@ -8,6 +8,7 @@ import { BsSun, BsMoon } from 'react-icons/bs';
 import { PiNotePencilThin } from 'react-icons/pi';
 import { Menu } from './Menu';
 import { MediaInput } from './Input/MediaInput';
+import { TextareaInput } from './Input/TextareaInput';
 
 export const Note = () => {
     const { darkmode, toggleDarkmode } = useDarkmode();
@@ -20,14 +21,14 @@ export const Note = () => {
         setSelectedMenu(menu);
     };
     const [title, setTitle] = useState<string>('');
-    const [url, setUrl] = useState<string>('');
+    const [body, setBody] = useState<string>('');
 
-    const handleFormSubmit = (title: string, url: string) => {
+    const handleFormSubmit = (title: string, body: string) => {
         setTitle(title);
-        setUrl(url);
+        setBody(body);
         setSelectedMenu('');
     };
-    console.log(title, url);
+    console.log(title, body);
     const handleClose = () => {
         setSelectedMenu('');
     };
@@ -44,7 +45,8 @@ export const Note = () => {
                         <PiNotePencilThin/> ADD
                     </div>
                     {menuOpen && <Menu selected={handleMenu} /> }
-                    {selectedMenu && <MediaInput onFormSubmit={handleFormSubmit} handleClose={handleClose}/>}
+                    {selectedMenu === 'video' && <MediaInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
+                    {selectedMenu === 'note' && <TextareaInput onFormSubmit={handleFormSubmit} handleClose={handleClose} />}
                     <div className={styles.board}>
 
                     </div>
