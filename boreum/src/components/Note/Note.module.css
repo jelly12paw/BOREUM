@@ -69,8 +69,16 @@ a {
     cursor: pointer;
 }
 
+.add:hover {
+    transform: scale(1.1);
+}
+
 .add svg {
     margin-right: 0.4rem;
+}
+
+.opened {
+    filter: brightness(0.9);
 }
 
 .board {

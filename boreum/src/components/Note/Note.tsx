@@ -40,7 +40,7 @@ export const Note = () => {
                     <button className={styles.mode} onClick={toggleDarkmode}>{darkmode ? <BsSun /> : <BsMoon />}</button>
                 </div>
                 <div className={styles.container}>
-                    <div className={styles.add} onClick={toggleMenu}>
+                    <div className={`${styles.add} ${menuOpen ? styles.opened : ''}`} onClick={toggleMenu}>
                         <PiNotePencilThin/> ADD
                     </div>
                     {menuOpen && <Menu selected={handleMenu} /> }

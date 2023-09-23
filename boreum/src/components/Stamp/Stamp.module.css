@@ -135,6 +135,7 @@ a {
 
 .add svg {
     margin-right: 0.2rem;
+    color: var(--actext);
 }
 
 .add:hover {
@@ -162,6 +163,10 @@ a {
     margin-top: 0;
     margin-left: 0.3rem;
     font-size: 1.7rem;
+}
+
+.create button svg {
+    color: var(--text);
 }
 
 .create button:hover {

@@ -19,7 +19,6 @@
     height: 35%;
     background-color: rgb(255, 255, 255, 0.8);
     border-radius: 0.5rem;
-    padding: 1rem 0.5rem;
 }
 
 .form__container {
@@ -51,4 +50,8 @@ button svg {
     font-size: 1.5rem;
     margin-right: 1rem;
     color: #1f1762;
+}
+
+button:hover {
+    transform: scale(1.1);
 }

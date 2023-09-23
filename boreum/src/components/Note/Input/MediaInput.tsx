@@ -14,20 +14,22 @@ export const MediaInput: React.FC<MediaInputProps> = ({ onFormSubmit, handleClos
         onFormSubmit(title, url);
     };
 
-    return  <div className={styles.media}>    
-                <div className={styles.form}>
-                    <div className={styles.form__container}>
-                        <label htmlFor="title">제목</label>
-                        <input type="text" id="title" placeholder={'제목을 입력해주세요'} value={title} onChange={(e) => setTitle(e.target.value)} />
+    return  <form>
+                <div className={styles.media}>    
+                    <div className={styles.form}>
+                        <div className={styles.form__container}>
+                            <label htmlFor="title">제목</label>
+                            <input type="text" id="title" placeholder={'제목을 입력해주세요'} value={title} onChange={(e) => setTitle(e.target.value)} />
+                        </div>
+                        <div className={styles.form__container}>
+                            <label htmlFor="url">URL</label>
+                            <input type="text" id="url" placeholder={'파일 주소를 입력해주세요'} value={url} onChange={(e) => setUrl(e.target.value)} required />
+                        </div>
+                        <div className={styles.btns}>
+                            <button onClick={handleSubmit}><BsSend /></button>
+                            <button onClick={handleClose}><BsXLg /></button>
+                        </div>
                     </div>
-                    <div className={styles.form__container}>
-                        <label htmlFor="url">URL</label>
-                        <input type="text" id="url" placeholder={'파일 주소를 입력해주세요'} value={url} onChange={(e) => setUrl(e.target.value)} />
-                    </div>
-                    <div className={styles.btns}>
-                        <button onClick={handleSubmit}><BsSend /></button>
-                        <button onClick={handleClose}><BsXLg /></button>
-                    </div>
-                </div>
-            </div>;
+                </div>;
+            </form>
 };
