@@ -4,6 +4,7 @@ import { Video } from "./Video";
 import { BsTrash } from 'react-icons/bs';
 import { Image } from "./Image";
 import { NoteItem } from "./NoteItem";
+import { Todo } from "./Todo";
 
 interface RenderItemsProps {
     items: {
@@ -30,6 +31,11 @@ export const RenderItems: React.FC<RenderItemsProps> = ({ items, handleDelete })
             case 'Note':
                 return <div key={idx} className={styles.container}>
                             <NoteItem title={item.title} body={item.body} />
+                            <button onClick={() => handleDelete(idx)}><BsTrash /></button>
+                       </div>
+            case 'Todo':
+                return <div key={idx} className={styles.todo__container}>
+                            <Todo title={item.title} body={item.body} />
                             <button onClick={() => handleDelete(idx)}><BsTrash /></button>
                        </div>
             default:

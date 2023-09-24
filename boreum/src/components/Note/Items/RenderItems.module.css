@@ -16,6 +16,26 @@
     color: var(--text);
 }
 
+.todo__container {
+    display: flex;
+    align-items: center;
+}
+
+.todo__container:hover button {
+    visibility: visible;
+    margin-top: 0;
+}
+
+.todo__container button {
+    visibility: hidden;
+    margin-top: 0;
+}
+
+.todo__container button svg {
+    color: var(--text);
+    font-size: 1.5rem;
+}
+
 /* 태블릿 크기 스타일 */
 @media screen and (max-width: 1070px) {
     .container button {
