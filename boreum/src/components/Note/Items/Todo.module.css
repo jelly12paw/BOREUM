@@ -21,17 +21,3 @@
     margin-right: 0.5rem;
     accent-color: var(--actext);
 }
-
-/* 태블릿 크기 스타일 */
-@media screen and (max-width: 1070px) {
-    .image__container img {
-        width: 50rem;
-    }
-}
-
-/* 모바일 크기 스타일 */
-@media screen and (max-width: 830px) {
-    .image__container img {
-        width: 30rem;
-    }
-}

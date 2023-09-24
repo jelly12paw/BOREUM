@@ -17,6 +17,7 @@
 }
 
 .todo__container {
+    width: 90vw;
     display: flex;
     align-items: center;
 }
@@ -38,7 +39,7 @@
 
 /* 태블릿 크기 스타일 */
 @media screen and (max-width: 1070px) {
-    .container button {
+    .container button, .todo__container button {
         visibility: visible;
     }
     .container button svg {
@@ -48,7 +49,7 @@
 
 /* 모바일 크기 스타일 */
 @media screen and (max-width: 830px) {
-    .container button {
+    .container button, .todo__container button {
         visibility: visible;
     }
     .container button svg {

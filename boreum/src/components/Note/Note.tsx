@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Note.module.css';
 import yellowmoon from '../../assets/yellowmoon.png';
 import whitemoon from '../../assets/whitemoon.png';
@@ -12,6 +12,12 @@ import { TextareaInput } from './Input/TextareaInput';
 import { TextInput } from './Input/TextInput';
 import { RenderItems } from './Items/RenderItems';
 
+interface Item {
+    type: string;
+    title: string;
+    body: string;
+}
+
 export const Note = () => {
     const { darkmode, toggleDarkmode } = useDarkmode();
 
@@ -24,7 +30,22 @@ export const Note = () => {
         setSelectedMenu(menu);
     };
 
-    const [items, setItems] = useState<{type: string, title: string, body: string}[]>([]);
+    const [items, setItems] = useState<Item[]>(() => {
+        const storedItems = localStorage.getItem('items');
+        return storedItems ? JSON.parse(storedItems) : [];
+    });
+    
+    // useEffect(() => {
+    //     const storedItems = localStorage.getItem('items');
+    //     if (storedItems) {
+    //         setItems(JSON.parse(storedItems));
+    //     }
+    // }, []);
+    
+    useEffect(() => {
+        localStorage.setItem('items', JSON.stringify(items));
+    }, [items]);
+    
     const handleFormSubmit = (title: string, body: string) => {
         const newItem = {type: selectedMenu, title: title, body: body};
         setItems([...items, newItem]);
