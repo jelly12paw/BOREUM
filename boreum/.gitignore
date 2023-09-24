@@ -69,3 +69,4 @@ packages/react-devtools-timeline/dist
 !.yarn/sdks
 
 *.ts
+!component.module.css.d.ts
