@@ -2993,6 +2993,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-icons@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@types/react-icons@npm:3.0.0"
+  dependencies:
+    react-icons: "*"
+  checksum: 885a9e9d43fd5543c3405b75b7d4f910492bd3bf2a2aa0a6784c6566fc3a9804bd0f6b0678779b4a15df642c35db0069a1d3f3f2c548bfc8414d5abe1fcc6469
+  languageName: node
+  linkType: hard
+
 "@types/react-router-dom@npm:^5.3.3":
   version: 5.3.3
   resolution: "@types/react-router-dom@npm:5.3.3"
@@ -4250,6 +4259,7 @@ __metadata:
     "@types/node": ^16.7.13
     "@types/react": ^18.0.0
     "@types/react-dom": ^18.0.0
+    "@types/react-icons": ^3.0.0
     "@types/react-router-dom": ^5.3.3
     eslint-config-react-app: ^7.0.1
     react: ^18.2.0
@@ -10959,7 +10969,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-icons@npm:^4.11.0":
+"react-icons@npm:*, react-icons@npm:^4.11.0":
   version: 4.11.0
   resolution: "react-icons@npm:4.11.0"
   peerDependencies:

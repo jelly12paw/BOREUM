@@ -67,6 +67,5 @@ packages/react-devtools-timeline/dist
 !.yarn/releases
 !.yarn/versions
 !.yarn/sdks
-
-*.ts
-!component.module.css.d.ts
+reportWebVitals.ts
+setupTests.ts
