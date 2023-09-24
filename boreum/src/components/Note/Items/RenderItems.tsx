@@ -3,6 +3,7 @@ import styles from "./RenderItems.module.css";
 import { Video } from "./Video";
 import { BsTrash } from 'react-icons/bs';
 import { Image } from "./Image";
+import { NoteItem } from "./NoteItem";
 
 interface RenderItemsProps {
     items: {
@@ -24,6 +25,11 @@ export const RenderItems: React.FC<RenderItemsProps> = ({ items, handleDelete })
             case 'Image':
                 return <div key={idx} className={styles.container}>
                             <Image title={item.title} body={item.body} />
+                            <button onClick={() => handleDelete(idx)}><BsTrash /></button>
+                       </div>
+            case 'Note':
+                return <div key={idx} className={styles.container}>
+                            <NoteItem title={item.title} body={item.body} />
                             <button onClick={() => handleDelete(idx)}><BsTrash /></button>
                        </div>
             default:
