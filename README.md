@@ -5,6 +5,15 @@
 > 보름 간 사용자의 하루를 기록하여 습관 만들기
 >
 
+<br>
+
+### 배포 사이트 바로가기
+
+# [**BOREUM**](https://boreum.netlify.app/)
+
+<br>
+<br>
+
 # 메인 화면
 
 > **PC / Tablet 반응형**
