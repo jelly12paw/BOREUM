@@ -5,4 +5,4 @@ status = 200
 
 [build]
 publish = "build"
-command = "yarn build"
+command = "npm run build"
